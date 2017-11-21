@@ -2,14 +2,33 @@
 <html>
 <head>
 	<title>CSS-android-logo</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 </head>
 <style>
+body{
+  font-family: 'Roboto', sans-serif;
+}
 .container{
 	height: 300px;
 	width: 292px;
 	margin: 0 auto;
 	margin-top: 100px;
 	/*border: 1px solid #000;*/
+}
+.container:hover #left-hand{
+	transition: all ease 0.5s;
+	transform: rotate(150deg);
+	transform-origin: 70% 20%;
+}
+.container:hover #right-hand{
+	transition: all ease 0.5s;
+	transform: rotate(-150deg);
+	transform-origin: 30% 20%;
+}
+.container:hover .eyes{
+	/*transition: all ease 1s;*/
+	border-radius: 0;
+	height: 2px;
 }
 .head{
 	border-radius: 50%;
@@ -52,6 +71,13 @@
 	margin-top: 20px;
 	border-radius: 20px;
 }
+footer{
+	margin-top: calc(100vh - 430px);
+}
+footer p{
+	/*margin: 0 auto;*/
+	text-align: center;
+}
 </style>
 
 <body>
@@ -67,15 +93,18 @@
 		</div>
 	</div>
 	<div class="flex move-up">
-		<div class="limbs"></div>
+		<div id="left-hand" class="limbs"></div>
 		<div class="torso"></div>
-		<div class="limbs"></div>
+		<div id="right-hand" class="limbs"></div>
 	</div>
 	<div class="flex" style="margin-top: -78px;">
 		<div class="limbs" style="margin-left: 88px;"></div>
 		<div class="limbs" style="margin-left: 37px;"></div>
 	</div>
 </div>
+<footer>
+	<p>"Android-happy" created by <strong><a href="https://github.com/subhban01" style="text-decoration: none;color: #000;">Subhadeep</a></strong></p>
+</footer>
 </body>
 </html>
 
